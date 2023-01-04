@@ -7,7 +7,7 @@ import express from 'express'
 const app = express()
 
 // Configure the app (app.set)
-
+app.set('view engine', 'ejs')
 
 
 // Mount Middleware (app.use)
@@ -18,7 +18,9 @@ const app = express()
 app.get('/', function(req, res) {
   res.send('<h1>hello, friend</h1>')
 })
-
+app.get('/home', function(req, res) {
+  res.render('home')
+})
 
 // Tell the app to listen on port 3000
 
