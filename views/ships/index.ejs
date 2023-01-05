@@ -1,0 +1,12 @@
+<body>
+  <h1>Docked Ships</h1>
+  <ul>
+    <% ships.forEach(ship => { %>
+      <li>
+				<%= ship.name %> 
+				- 
+				<%= ship.type %>
+			</li>
+    <% }) %>
+  </ul>
+</body>
